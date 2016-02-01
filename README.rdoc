@@ -1,28 +1,27 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+1=> rails new -d postresql twitterGrape
 
-Things you may want to cover:
+2=> Bundle Grape
 
-* Ruby version
+-------------------------
+Twitter API Keys & Tokens
+-------------------------
 
-* System dependencies
+Consumer Key (API Key)	ZfKCy4nDDDDwHBfXrHZWZylm4
 
-* Configuration
+Consumer Secret (API Secret)	sEbZkn6rrCZP1WsHnc7334LIVZln5Se0UkmBUrC6nhtcFrKiY8
 
-* Database creation
+Access Token	2227138380-cGCSwbdKS1ncbsfFiNVgN501EBIRkjTX1DbMP7Q
 
-* Database initialization
+Access Token Secret	iQKrJxI8TQVgIdiBSmtqeWZlKTAPx1Hi9i2FRfmYETYoI
 
-* How to run the test suite
+rails g model Tweet ...  <- (Singular & Capatilized)
 
-* Services (job queues, cache servers, search engines, etc.)
+When should each be used?
+_____________________
+string VS. text in RUBY
 
-* Deployment instructions
-
-* ...
+As a general rule of thumb, use :string for short text input (username, email, password, titles, etc.) and use :text for longer expected input such as descriptions, comment content, etc.
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
