@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get 'import_tweet_data/index'
-
-  mount API => '/'
+  root to: 'import_tweet_data#index'
+  mount Tweet::Data => '/'
 
 
 

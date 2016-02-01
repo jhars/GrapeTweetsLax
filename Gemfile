@@ -45,5 +45,13 @@ group :development, :test do
   gem 'json'
   gem 'oauth'
   
+  gem 'twitter'
+
+  gem 'rspec-rails', '~> 3.0'
+  gem "rack-test"
+  gem "rspec-core"
+  gem "rspec-expectations"
+  gem "rspec-mocks"
+  
 end
 

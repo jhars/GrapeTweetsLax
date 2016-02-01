@@ -10,6 +10,7 @@ module TwitterGrape03
   class Application < Rails::Application
     config.paths.add File.join('app', 'api'), glob: File.join('**', '*.rb')
     config.autoload_paths += Dir[Rails.root.join('app', 'api', '*')]
-    # config.active_record.raise_in_transactional_callbacks = true
+    config.active_record.raise_in_transactional_callbacks = true
+    config.web_console.development_only = false
   end
 end

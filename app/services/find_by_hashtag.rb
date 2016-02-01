@@ -12,19 +12,11 @@ class FindByHashtag
   	# address = URI("#{baseurl}#{path}?#{query}")
   	request = Net::HTTP::Get.new address.request_uri
   	# Print data about a list of Tweets
-  	def print_timeline(tweetsData)
-  	  # ADD CODE TO ITERATE THROUGH EACH TWEET AND PRINT ITS TEXT
-  	  tweets = tweetsData
-  	    # tweets.each do |tweet|
-  	    		# tweetInfo = JSON.pretty_generate(tweets)
-
-  	    		# tweetData = tweetStatuses[0..1000]
-  	        puts tweets
-
-  	        # p tweets["statuses"]
-  	        # p tweets["metadata"]
-
-  	    # end
+  	def print_timeline(tweets_data)
+      tweets_object = tweets_data[0]
+  	    tweets_object.each do |tweet|
+            p tweet
+  	    end
   	end
 
   	# Set up HTTP.
@@ -41,11 +33,10 @@ class FindByHashtag
   	response = http.request request
 
   	# Parse and print the Tweet if the response code was 200
-  	tweetsData = nil
+  	tweets_data = nil
   	if response.code == '200' then
-  		# tweets = response.body
-  	  tweetsData = JSON.parse(response.body)
-  	  print_timeline(tweetsData)
+  	  tweets_data = JSON.parse(response.body)  #['statuses']
+  	  print_timeline(tweets_data)
   	end
 	end
 end
