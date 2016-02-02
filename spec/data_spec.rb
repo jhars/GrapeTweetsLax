@@ -9,7 +9,7 @@ describe Grape::API do
 
   context "v1" do
     context "system" do
-			it "should check that the response is a JSON array" do 
+			it "should check that the response is a String" do 
 				get "/api/v1/tweet_data.json?mention=warriorlacrosse&limit=3/"
 				expect(last_response.body).to be_kind_of(String)
 			end
